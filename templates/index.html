@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <title>Text utils</title>
+</head>
+<body>
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Textutils.com</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="https://www.en.wikipedia.org">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="https://en.wikipedia.org/wiki/Software_project_management">About</a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="https://www.facebook.com/Annam Kanaka Nishanth/">Contact us</a>
+      </li>
+
+    </ul>
+      </div>
+</nav>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Welcome to textutils Website </strong> You can do all the operations on the text
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="container">
+    <form action="analyse" method="post"> {% csrf_token %}
+    <label for="exampleFormControlTextarea1" >Welcome to textutils homepage. Enter the text below</label>
+    <textarea class="form-control"  name="text" id="exampleFormControlTextarea1" rows="8"></textarea>
+
+
+<div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" name="removepunc" id="customSwitch1">
+  <label class="custom-control-label" for="customSwitch1">Remove punctuation</label>
+</div>
+    <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" name="capitaltext" id="customSwitch2">
+  <label class="custom-control-label" for="customSwitch2">Capitalise Text</label>
+</div>
+    <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" name="charcount" id="customSwitch3">
+  <label class="custom-control-label" for="customSwitch3">Character count</label>
+</div>
+    <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" name="newlineremover" id="customSwitch4">
+  <label class="custom-control-label" for="customSwitch4">New line remover</label>
+</div>
+    <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" name="spaceremover" id="customSwitch5">
+  <label class="custom-control-label" for="customSwitch5">Extra space remover</label>
+</div>
+   <button type="submit" class="btn btn-danger mt-2" >Analyse Text</button> <br/>
+        <img style="-webkit-user-select: none;cursor: zoom-in;" src="https://d2u4q3iydaupsp.cloudfront.net/dHFYHEYmNSBq6eHiakAXj73XdZrAzGhchtINb4UkSbN0hdEsSLrq732YdfAH6jy5xPEZhCfmM67VGEQEYa8sA6kIQbXQ1uIevvLpiUXyFuZC5GxwyCHhg5VGOp0TthqM" width="600" height="200">
+</form>
+</div>
+</body>
+</html>
